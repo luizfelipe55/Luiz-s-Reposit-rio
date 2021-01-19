@@ -1,0 +1,25 @@
+using System; 
+
+class URI {
+
+    static void Main(string[] args) {
+        string dados = Console.ReadLine();
+        string[] a1 = dados.Split(' ');
+        string[] b1 = dados.Split(' ');
+        string[] c1 = dados.Split(' ');
+        double a = double.Parse(a1[0]);
+        double b = double.Parse(b1[0]);
+        double c = double.Parse(c1[0]);
+        double triangulo = ((a*a)+(b*b))/2;
+        double circunferencia = (3.14*c*c);
+        double trapezio = ((a+b)*c)/2;
+        double quadrado = (b*b);
+        double retangulo = (a*b);
+        Console.WriteLine($"TRIANGULO: {triangulo:0.000}");
+        Console.WriteLine($"CIRCULO: {circunferencia:0.000}");
+        Console.WriteLine($"TRAPEZIO: {trapezio:0.000}");
+        Console.WriteLine($"QUADRADO: {quadrado:0.000}");
+        Console.WriteLine($"RETANGULO: {retangulo:0.000}");
+    }
+
+}
