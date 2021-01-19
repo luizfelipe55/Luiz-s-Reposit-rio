@@ -1,0 +1,15 @@
+using System;
+
+class MainClass {
+  public static void Main (string[] args) {
+    Console.WriteLine("Digite a base e a altura do retângulo");
+    double valor_1 = double.Parse(Console.ReadLine());
+    double valor_2 = double.Parse(Console.ReadLine());
+    double area,perimetro,diagonal,diagonal_2;
+    area = (valor_1*valor_2);
+    perimetro = ((valor_1*2)+(valor_2*2));
+    diagonal = ((valor_1*valor_1)+(valor_2*valor_2));
+    diagonal_2 = Convert.ToSingle(Math.Sqrt(diagonal));
+    Console.WriteLine ($"Área= {area:0.00} - Perímetro= {perimetro:0.00} - Diagonal= {diagonal_2:0.00}");
+  }
+}
