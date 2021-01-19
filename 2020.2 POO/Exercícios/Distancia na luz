@@ -1,0 +1,13 @@
+using System;
+
+class MainClass {
+  public static void Main (string[] args) {
+    string[] tempo = Console.ReadLine().Split(':');
+    int hora,minuto,segundo;
+    hora = int.Parse(tempo[0]);
+    minuto = int.Parse(tempo[1]);
+    segundo = int.Parse(tempo[2]);
+    int distancia = (hora*3600)+(minuto*60)+segundo;
+    Console.WriteLine($"A luz percorreu {distancia} km nesse intervalo");
+  }
+}
