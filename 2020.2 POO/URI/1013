@@ -1,0 +1,33 @@
+using System;
+//1013
+class MainClass {
+  public static void Main (string[] args) {
+    string[] numeros = Console.ReadLine().Split(' ');
+    int a = int.Parse(numeros[0]);
+    int b = int.Parse(numeros[1]);
+    int c = int.Parse(numeros[2]);
+    
+    if (a > b)
+    {
+      if (a > c)
+      {
+        Console.WriteLine($"{a} eh o maior");
+      }
+      else
+      {
+        Console.WriteLine($"{b} eh o maior");
+      }
+    }
+    else
+    {
+      if ( b > c)
+      {
+        Console.WriteLine($"{b} eh o maior");
+      }
+      else
+      {
+        Console.Write($"{c} eh o maior");
+      }
+    }
+  }
+}
