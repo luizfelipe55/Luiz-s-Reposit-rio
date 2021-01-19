@@ -1,0 +1,18 @@
+using System;
+
+class MainClass {
+  public static void Main (string[] args) {
+    string[] numeros = Console.ReadLine().Split(' ');
+    string[] numeros_2 = Console.ReadLine().Split(' ');
+    double num_1,num_2,num_3,num_4;
+
+    num_1 = double.Parse(numeros[0]);
+    num_2 = double.Parse(numeros[1]);
+    num_3 = double.Parse(numeros_2[0]);
+    num_4 = double.Parse(numeros_2[1]);
+
+    double distancia = ((num_2-num_1)*(num_2-num_1))+((num_4-num_3)*(num_4-num_3));
+    double resultado = Convert.ToSingle(Math.Sqrt(distancia));
+    Console.WriteLine($"{resultado:0.0000}");
+  }
+}
