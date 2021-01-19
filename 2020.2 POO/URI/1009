@@ -1,0 +1,12 @@
+using System;
+//1009
+class MainClass {
+  public static void Main (string[] args) {
+    string nome = Console.ReadLine();
+    double fixo = double.Parse(Console.ReadLine());
+    double vendas = double.Parse(Console.ReadLine());
+
+    double comi = (vendas * 0.15);
+    Console.WriteLine($"TOTAL = R$ {(fixo+comi):0.00}");
+  }
+}
