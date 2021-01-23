@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>language switch using JavaScript</title>
+	<link rel="stylesheet" href="./main.css">
+</head>
+<body>
+	<div class="container">
+		<div class="langWrap">
+			<a href="#" language='portuguese' class="active">PT-BR</a>
+			<a href="#" language='english'>EN</a>
+		</div>
+
+		<div class="content">
+			<h2 class="title">ALUGUEIS DE CARROS – DIRIJA BEM</h2>
+			<p class="icon"><img src="icone_titulo.png" alt="ícone" height="100" width="100"></p>
+			<p class="description">Esta página interativa foi desenvolvida por dois programadores estudantes, como forma de exercitar os conhecimentos adquiridos ao longo de um semestre diferente, por causa da pandemia do Covid 19. Obrigado por ser um usuário beta do nosso sistema! Vida longa e próspera... e que a força esteja com você!
+				<form action="index.html">
+					<p><img src="nome.png" alt="Nome" height="30" width="30"><input type="text" name="nome" id="nome"><b class="part_1"> Nome</b></p>
+					<p><img src="tel.png" alt="tel" height="30" width="30"> <input type="text" name="tel" id="tel"> <b class="part_2">Telefone</b> <br></p>
+					<p><img src="local.png" alt="Local" height="30" width="30"><input type="text" name="local" id="local"> <b class="part_3">Local</b> <br></p>
+					<p><img src="data_apartir.png" alt="Data de recebimento" height="30" width="30"> <input type="date" name="data_tempo1" id="tempo_1"> <b class="part_4">Data de recebimento</b> <br></p>
+					<p><img src="marca.png" alt="Marca" height="30" width="30"><input type="text" name="marca" id="marca"> <b class="part_5">Marca</b> <br></p>
+					<p><img src="data_devolucao.png" alt="data de entrega" height="30" width="30"><input type="date" name="data_tempo2" id="tempo_2"> <b class="part_6">Data de entrega</b> <br></p>
+					<p><img src="valor.png" alt="valor" height="30" width="30"><input type="text" name="valor" id="valor"> <b class="part_7">Valor</b> <br></p>
+					<p><img src="km.png" alt="km" height="30" width="30"><input type="text" name="km" id="km"> <b class="part_8">Km/dia necessário</b> <br></p>
+					<p><button><b class="botão">Enviar</b></button></p>
+				</form>
+			</p>
+		</div>
+	</div>
+	<script>
+		const langEl = document.querySelector('.langWrap');
+		const link = document.querySelectorAll('a');
+		const titleEl = document.querySelector('.title');
+		const descrEl = document.querySelector('.description');
+		const part1 = document.querySelector('.part_1')
+		const part2 = document.querySelector('.part_2')
+		const part3 = document.querySelector('.part_3')
+		const part4 = document.querySelector('.part_4')
+		const part5 = document.querySelector('.part_5')
+		const part6 = document.querySelector('.part_6')
+		const part7 = document.querySelector('.part_7')
+		const part8 = document.querySelector('.part_8')
+		const but = document.querySelector('.botão')
+
+		link.forEach(el => {
+			el.addEventListener('click', () => {
+				langEl.querySelector('.active').classList.remove('active');
+				el.classList.add('active');
+
+				const attr = el.getAttribute('language');
+
+				titleEl.textContent = data[attr].title;
+				descrEl.textContent = data[attr].description;
+				part1.textContent = data[attr].part_1;
+				part2.textContent = data[attr].part_2;
+				part3.textContent = data[attr].part_3;
+				part4.textContent = data[attr].part_4;
+				part5.textContent = data[attr].part_5;
+				part6.textContent = data[attr].part_6;
+				part7.textContent = data[attr].part_7;
+				part8.textContent = data[attr].part_8;
+				but.textContent = data[attr].botão;
+			});
+		});
+		
+		var data = {
+			  "portuguese": 
+			  {
+			    "title": "ALUGUEIS DE CARROS – DIRIJA BEM!",
+			    "description": 
+					"Esta página interativa foi desenvolvida por dois programadores estudantes, como forma de exercitar os conhecimentos adquiridos ao longo de um semestre diferente, por causa da pandemia do Covid 19. Obrigado por ser um usuário beta do nosso sistema! Vida longa e próspera... e que a força esteja com você!",
+				"part_1":
+					"nome",
+				"part_2":
+					"telefone",
+				"part_3":
+					"Local",
+				"part_4":
+					"Data de recebimento",
+				"part_5":
+					"Marca",
+				"part_6":
+					"Data de entrega",
+				"part_7":
+					"Valor",
+				"part_8":
+					"Km/dia necessário",
+				"botão":
+					"Enviar"
+			  },
+			  "english": 
+			  {
+			    "title": "RENT A CAR-DRIVE WELL!",
+			    "description": 
+					"This interactive page was developed by two student programmers, as a way to exercise the knowledge acquired over a different semester, due to the Covid 19 pandemic. Thank you for being a beta user of our system! Long and prosperous life ... and may the force be with you!",
+				"part_1":
+					"name",
+				"part_2":
+					"smartphone",
+				"part_3":
+					"Place",
+				"part_4":
+					"Receive date",
+				"part_5":
+					"Marca",
+				"part_6":
+					"Deliver date",
+				"part_7":
+					"Price",
+				"part_8":
+					"Km/day Necessary",
+				"botão":
+					"Submit"
+			  },
+			}
+	</script>
+</body>
+</html>
